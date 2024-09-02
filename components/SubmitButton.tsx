@@ -9,6 +9,7 @@ interface ButtonProps {
 }
 
 const SubmitButton = ({isLoading, className, children}: ButtonProps) => {
+    console.log(isLoading);
   return (
     <Button type='submit' disabled={isLoading} className={className ?? 'shad-primary-btn w-full'}>
         {isLoading ? (
@@ -27,4 +28,4 @@ const SubmitButton = ({isLoading, className, children}: ButtonProps) => {
   )
 }
 
-export default SubmitButton
+export default SubmitButton;
