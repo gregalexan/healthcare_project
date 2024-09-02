@@ -23,7 +23,8 @@ import FileUploader from "../FileUploader"
  
 const RegisterForm = ({user} : {user: User}) => {
   const router = useRouter()
-  const [isLoading, setIsLoading] = useState(false)
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof PatientFormValidation>>({
     resolver: zodResolver(PatientFormValidation),
@@ -37,6 +38,7 @@ const RegisterForm = ({user} : {user: User}) => {
 
   async function onSubmit(values: z.infer<typeof PatientFormValidation>) {
     setIsLoading(true);
+    
     let formData; 
     
     if ( values.identificationDocument && values.identificationDocument.length > 0 ) {
@@ -64,7 +66,6 @@ const RegisterForm = ({user} : {user: User}) => {
     } catch (error) {
         console.log(error)
     }
-    setIsLoading(false);
   }
   
   
@@ -185,7 +186,7 @@ const RegisterForm = ({user} : {user: User}) => {
         <CustomFormField
             fieldType={FormFieldType.SELECT}
             control={form.control}
-            name="primaryPhyisician"
+            name="primaryPhysician"
             label="Primary Physician"
             placeholder="Select a Physician"
         >
