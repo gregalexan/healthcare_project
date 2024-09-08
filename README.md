@@ -1,5 +1,6 @@
 # CarePulse: Healthcare Management Application
 A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.  
+  
 This was a project by [JavaScript Mastery](https://www.jsmastery.pro/)  
 
 
@@ -31,4 +32,48 @@ You can visit the live site [here](https://healthcare-project-iota.vercel.app/) 
 👉 **File Upload Using Appwrite Storage**: Users can upload and store files securely within the app using Appwrite storage services.  
 👉 **Manage and Track Application Performance Using Sentry**: The application uses Sentry to monitor and track its performance and detect any errors.  
 
+## 🤸 Quick Start  
+  
+### Prerequisites  
 
+Make sure you have the following installed on your machine:
+* [Git](https://git-scm.com/)
+* [NodeJS](https://nodejs.org/en)
+* [npm](https://www.npmjs.com/)
+
+### Cloning the Repository  
+```sh
+git clone git@github.com:gregalexan/healthcare_project.git
+```
+  
+Inside the *healthcare_project*
+```sh
+cd healthcare_project
+```
+
+### Installation  
+```sh
+npm install
+```
+  
+### Set Up Enviroment Variables
+Create a new file named *.env.local* in the root of the project and add the following content:
+```sh
+#APPWRITE
+NEXT_PUBLIC_ENDPOINT=https://cloud.appwrite.io/v1
+PROJECT_ID=
+API_KEY=
+DATABASE_ID=
+PATIENT_COLLECTION_ID=
+APPOINTMENT_COLLECTION_ID=
+NEXT_PUBLIC_BUCKET_ID=
+
+NEXT_PUBLIC_ADMIN_PASSKEY=123456
+```
+Replace the placeholder values with your actual Appwrite credentials. You can get these by signing up one the [Appwrite Website](https://appwrite.io/)  
+
+### Running the Project  
+```sh
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
